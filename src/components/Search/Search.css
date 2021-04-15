@@ -1,0 +1,32 @@
+.search {
+    padding: 1% 0;
+    margin: 5% 0
+}
+
+.tags {
+    display: block;
+    margin: 2%;
+}
+
+.tags p {
+    display: inline;
+    color: rgb(206, 203, 46);
+    font-family: 'Food Secret regular';
+    font-size: 2rem;
+}
+
+.tags a {
+    color: white;
+    text-decoration: none;
+    margin-left: 3%;
+    transition: .2s;
+}
+
+.tags a:hover {
+    font-size: 1.2rem;
+    transition: .2s;
+}
+
+.tags a::before {
+    content: "#";
+}

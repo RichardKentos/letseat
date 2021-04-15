@@ -1,0 +1,73 @@
+.recipe {
+    max-width: 300px;
+    height: auto;
+    margin: 1%;
+    background-color: rgb(231, 231, 231);
+    transition: 0.3s;
+    position: relative;
+    box-shadow: none;
+    border-radius: 50px;
+}
+
+.recipe:hover {
+    transition: 0.3s;
+    box-shadow: -10px -10px 0px rgb(206, 203, 46);
+
+}
+
+.recipe img {
+    transform: scale(1);
+    transition: 0.3s;
+    display: block;
+    margin: auto;
+    margin-top: 0;
+    padding-top: 0;
+    box-shadow: 3px 3px 10px black;
+}
+
+.recipe h2 {
+    background: linear-gradient(rgb(31, 31, 31), rgb(61, 61, 61)) ;
+    color: rgb(206, 203, 46);
+    font-family: 'Food Secret regular';
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5%;
+    margin:0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.clock,
+.servings {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+
+.servings {
+    position: relative;
+   width: 100%;
+   padding-bottom: 3rem;
+   margin-bottom: 2rem;
+}
+
+.recipe .recipe-icon {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    color:black;
+
+}
+.recipe a {
+    color: black;
+    font-weight: 600;
+    text-decoration-color:rgb(206, 203, 46) ;
+    text-decoration-thickness: .2rem;
+    transition: .3s;
+  }
+ .recipe a:hover {
+    text-decoration-color:rgb(36, 36, 36) ;
+  }
+  

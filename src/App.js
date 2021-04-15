@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from "../src/logo.png"
+import Search from "./components/Search/Search";
+import Recipes from "./components/Recipes/Recipes";
+import React, {useEffect, useState} from "react";
+
 
 function App() {
+  let [scroll, setScroll] = useState(0)
+
+  const addProgress = () => {
+    const scrollPx = document.documentElement.scrollTop;
+    const winHeightPx =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = `${scrollPx / winHeightPx * 100}`;
+    setScroll(scrolled);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll",addProgress);
+    return () => {
+      window.removeEventListener("scroll",addProgress);
+    } 
+    
+  }, [])
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <a href="index.html"><img className="logo" src={logo} alt="Logo"/></a>
+      <progress value={scroll} max="100"></progress> 
+      <Search />
+      <Recipes />
     </div>
   );
 }

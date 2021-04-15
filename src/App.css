@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+  font-family: 'Food Secret regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Food Secret regular'), url('./FoodSecret-regular.woff') format('woff');
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+::selection {
+    background-color:rgb(206, 203, 46);
+    color: rgb(39, 39, 39);
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  width: 15%;
+  border-radius: 250px;
+}
+
+h1 {
+  font-family: 'Food Secret regular';
+  font-size: 200px;
+  color: rgb(206, 203, 46);
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+progress {
+  position: fixed;
+  color: rgb(206, 203, 46);
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 10px;
+  width: 100%;
+  -webkit-appearance: none;
+  z-index: 1;
+}
+
+progress::-webkit-progress-bar {
+  background-color:  rgb(247, 247, 247);
+  border-radius: 7px;
+}
+
+progress::-webkit-progress-value {
+  background-color:  rgb(206, 203, 46);
+  border-radius: 7px;
 }
