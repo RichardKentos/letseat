@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -8,39 +8,38 @@ import "./Recipe.css";
 
 const Recipe = (props) => {
 // const instruct = steps.map( step => <li>{step.step}</li>);
+const [hover, setHover] = useState(false);
+
+
 
     if (props) {
         return(
-            <div className="recipe">
-                <h2>{props.title}</h2>
-                <img src={props.image} alt="Recipe"/>
-                <div className="clock">
+            <div onMouseEnter={() => setHover(true)} 
+                 onMouseLeave={() => setHover(false)} className="recipe">
+                {hover ? null : <h2>{props.title}</h2>} 
+                {hover ? null : <img src={props.image} alt="The recipe"/>} 
+                {hover ? null : <div className="clock">
                     <FontAwesomeIcon className="recipe-icon" icon={faClock} />
                     <time>{props.minutes} minutes</time>
-                </div>
-                <div className="servings">
+                </div>} 
+                {hover ? null : <div className="servings">
                     <FontAwesomeIcon className="recipe-icon" icon={faUsers} />
                     <p>{props.servings} servings</p>
-                </div>
-                
-                
-                {/* <Interweave content={props.info.summary} /> */}
-          
-                    {/* <ul>
-                        {instruct}
-                    </ul> */}
-        
-                    {/* <li>{props.info.analyzedInstructions.steps[1]}</li>
-                    <li>{props.info.analyzedInstructions.steps[2]}</li>
-                    <li>{props.info.analyzedInstructions.steps[3]}</li> */}
-          
-                
+                </div>} 
+                {hover ? null : <center>Hover over for instructions</center>} 
+            
+                {hover ? <div className="instructions">
+                            <h3>Instructions</h3>
+                            <Interweave content={props.instructions} />
+                        </div> : null}
+                {hover ? <a className="url" href={props.url}><b>Check out the recipe</b></a> : null}
+
+                          
             </div>
         )
     }
     else {
-        console.log(props);
-        return <h1>LOAAAAAAAAAAADING</h1>
+        return <h1 className="loader">Loading</h1>
     }
     
 }

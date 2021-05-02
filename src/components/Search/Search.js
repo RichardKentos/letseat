@@ -11,16 +11,9 @@ const filterTags = (e) => {
     console.log(filtered);
 }
 
-const filterSearch = (e) => {
-    
-    console.log(e.target.value)
-}
-
-
-
     return(
         <div className="tc search">
-            <input onChange={filterSearch} placeholder="Search for recipes or ingredients" className="w-50 h3 br4 pl5" type="text"/>
+            <input onChange={props.filter} placeholder="Search for recipes or ingredients" className="w-50 h3 br4 pl5" type="text"/>
             <div className="tags">
                 <p>Popular tags</p>
                 <a onClick={filterTags} href="#">meat</a>

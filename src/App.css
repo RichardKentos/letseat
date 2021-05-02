@@ -25,6 +25,11 @@ body {
   box-sizing: border-box;
 }
 
+.loader {
+  text-align: center;
+  font-size: 5rem;
+}
+
 .logo {
   position: absolute;
   left: 5%;

@@ -1,18 +1,21 @@
 .recipe {
-    max-width: 300px;
-    height: auto;
+    max-width: 350px;
+    height: 550px;
     margin: 1%;
     background-color: rgb(231, 231, 231);
     transition: 0.3s;
     position: relative;
     box-shadow: none;
-    border-radius: 50px;
+    overflow:hidden
 }
 
 .recipe:hover {
     transition: 0.3s;
     box-shadow: -10px -10px 0px rgb(206, 203, 46);
+}
 
+.recipe:hover img {
+    transform: scale(1.1);
 }
 
 .recipe img {
@@ -34,12 +37,11 @@
     text-align: center;
     padding: 5%;
     margin:0;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
 }
 
 .clock,
-.servings {
+.servings,
+.url {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;
@@ -50,8 +52,6 @@
 .servings {
     position: relative;
    width: 100%;
-   padding-bottom: 3rem;
-   margin-bottom: 2rem;
 }
 
 .recipe .recipe-icon {
@@ -60,14 +60,24 @@
     color:black;
 
 }
-.recipe a {
+.recipe .url {
     color: black;
     font-weight: 600;
+    font-size:2rem;
     text-decoration-color:rgb(206, 203, 46) ;
     text-decoration-thickness: .2rem;
     transition: .3s;
+    margin-bottom: 3rem;
   }
- .recipe a:hover {
+ .recipe .url:hover {
     text-decoration-color:rgb(36, 36, 36) ;
+  }
+
+  .instructions {
+      border-bottom: 3px solid rgb(36, 36, 36);
+      padding: 4%;
+      height: 300px;
+      overflow-y: scroll;
+      transition: 1s;
   }
   
