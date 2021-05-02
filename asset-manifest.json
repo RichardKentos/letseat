@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/letseat/static/css/main.01613f23.chunk.css",
+    "main.js": "/letseat/static/js/main.5d02721a.chunk.js",
+    "main.js.map": "/letseat/static/js/main.5d02721a.chunk.js.map",
+    "runtime-main.js": "/letseat/static/js/runtime-main.cd8a4096.js",
+    "runtime-main.js.map": "/letseat/static/js/runtime-main.cd8a4096.js.map",
+    "static/css/2.fe359a49.chunk.css": "/letseat/static/css/2.fe359a49.chunk.css",
+    "static/js/2.b9a2bc25.chunk.js": "/letseat/static/js/2.b9a2bc25.chunk.js",
+    "static/js/2.b9a2bc25.chunk.js.map": "/letseat/static/js/2.b9a2bc25.chunk.js.map",
+    "index.html": "/letseat/index.html",
+    "static/css/2.fe359a49.chunk.css.map": "/letseat/static/css/2.fe359a49.chunk.css.map",
+    "static/css/main.01613f23.chunk.css.map": "/letseat/static/css/main.01613f23.chunk.css.map",
+    "static/js/2.b9a2bc25.chunk.js.LICENSE.txt": "/letseat/static/js/2.b9a2bc25.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/letseat/static/media/FoodSecret-regular.4b6f5675.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd8a4096.js",
+    "static/css/2.fe359a49.chunk.css",
+    "static/js/2.b9a2bc25.chunk.js",
+    "static/css/main.01613f23.chunk.css",
+    "static/js/main.5d02721a.chunk.js"
+  ]
+}
