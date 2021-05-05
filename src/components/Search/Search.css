@@ -30,3 +30,15 @@
 .tags a::before {
     content: "#";
 }
+
+@media only screen and (max-width: 600px) {
+    .search input{
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+
+    .tags {
+        display: none;
+    }
+  }
